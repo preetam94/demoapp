@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	#d1{
+
+		border:15px solid #2ECC71;
+		width: 197px;
+		border-radius: 7px;
+	}
+	.btn{
+		width:38px;
+		height: 38px;
+		font-weight: bold;
+		font-size: 16px;
+	}
+	.btn1{
+		width:163px;
+		height: 38px;
+		font-weight: bold;
+	}
+	#txt1{
+		width:193px;
+		height: 30px;
+		font-weight: bold;
+		font-size: 16px;
+		background-color:#DADFE1;
+	}
+	table{
+		border: 15px solid #95A5A6;
+		background-color:#A2DED0  ;
+	}
+</style>
+</head>
+<body>
+	<h2>Calculator</h2>
+	<form name="form1">
+		<div id="d1">
+			<input type="text" id="txt1">
+			<table>
+				<tr>
+					<td><input type="button" value="1" onclick=document.form1.txt1.value+=1 class="btn"></td>
+					<td><input type="button" value="2" onclick=document.form1.txt1.value+=2 class="btn"></td>
+					<td><input type="button" value="3" onclick=document.form1.txt1.value+=3 class="btn"></td>	<td><input type="button" value=" &#8592;" onclick="document.form1.txt1.value = document.form1.txt1.value.substring(0,document.form1.txt1.value.length*1 -1)" class="btn"></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="4" onclick=document.form1.txt1.value+=4 class="btn"></td>
+					<td><input type="button" value="5" onclick=document.form1.txt1.value+=5 class="btn"></td>
+					<td><input type="button" value="6" onclick=document.form1.txt1.value+=6 class="btn"></td>
+					<td><input type="button" value="-" onclick=document.form1.txt1.value+="-" class="btn"></td>
+				</tr>
+				<tr>
+					<td><input type="button" value="7" onclick=document.form1.txt1.value+=7 class="btn"></td>
+					<td><input type="button" value="8" onclick=document.form1.txt1.value+=8 class="btn"></td>
+					<td><input type="button" value="9" onclick=document.form1.txt1.value+=9 class="btn"></td>
+					<td><input type="button" value="*" onclick=document.form1.txt1.value+="*" class="btn"></td>
+				</tr>
+				<tr>							
+					<td><input type="button" value="c" onclick=document.form1.txt1.value="" class="btn"></td>
+					<td><input type="button" value="0" onclick=document.form1.txt1.value+=0 class="btn"></td>
+					<td><input type="button" value="/" onclick=document.form1.txt1.value+="/" class="btn"></td>
+					<td><input type="button" value="+" onclick=document.form1.txt1.value+="+" class="btn"></td>
+				</tr>
+				<tr>
+					<td colspan="4"><input type="button" value="=" onclick=cal() class="btn1"></td>					
+				</tr>
+			</table>
+		</div>
+	</form>	
+	<script>
+		function cal()
+		{
+			str=document.form1.txt1.value;
+			res=eval(str);
+			document.form1.txt1.value=res;
+		}
+	</script>
+</body>
+</html>
